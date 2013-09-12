@@ -12,7 +12,7 @@ setopt RM_STAR_WAIT
 
 unsetopt beep
 
-bindkey -v
+bindkey -e
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'

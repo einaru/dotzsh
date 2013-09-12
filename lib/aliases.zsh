@@ -3,6 +3,8 @@
 # Copyright (c) 2013 Einar Uvsløkk
 # DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
+alias reload!='. ~/.zshrc'
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
