@@ -15,13 +15,13 @@ unsetopt beep
 bindkey -v
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/einar/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit && compinit
 autoload -U colors && colors
 autoload -U promptinit && promptinit
 
-export ZSH_ROOT=$HOME/.zsh
+local ZSH_ROOT=$HOME/.zsh
 
 . $ZSH_ROOT/init.zsh
 . $ZSH_ROOT/prompt.zsh

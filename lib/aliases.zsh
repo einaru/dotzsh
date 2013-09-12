@@ -32,3 +32,22 @@ alias updatedb="sudo updatedb"
 
 alias vi="vim"
 alias gvimrs="gvim --remote-silent"
+
+# Custom locations
+alias emner="cd /mnt/braavos/documents/ntnu/emne-koder;l"
+
+# Pacman
+alias pac-upgrade="sudo pacman -Syu"
+alias pac-install="sudo pacman -S"
+alias pac-localinstall="sudo pacman -U"
+alias pac-remove="sudo pacman -R"
+alias pac-remove-deps="sudo pacman -Rns"
+
+alias pac-info="pacman -Si"
+alias pac-search="pacman -Ss"
+alias pac-local-info="pacman -Qi"
+alias pac-local-search="pacman -Qs"
+
+alias pac-update="sudo pacman -Sy && sudo abs"
+alias pac-install-as-dependency="sudo pacman -S --asdeps"
+alias pac-refresh-mirror="sudo pacman -Syy"
