@@ -1,6 +1,8 @@
-# ==================================================
-# History
-# ==================================================
+# lib/history.zsh
+#
+# Copyright (c) 2013 Einar Uvsløkk
+# DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+
 HISTFILE=$HOME/.histfile
 HISTSIZE=10000
 SAVEHIST=10000

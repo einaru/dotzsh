@@ -4,7 +4,7 @@
 # DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
 # Application defaults
-export EDITOR="vim"
+export EDITOR='vim'
 
 # PATH
 PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
