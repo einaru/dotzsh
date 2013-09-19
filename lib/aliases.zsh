@@ -35,7 +35,7 @@ alias xclip='xclip -sel clip'
 
 # ================ Custom locations ==================
 
-alias emner='cd /mnt/braavos/documents/ntnu/emne-koder;l'
+alias emner='cd /mnt/$HOST/documents/ntnu/emne-koder;l'
 
 # ================ Administration ====================
 
