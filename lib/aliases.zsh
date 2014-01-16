@@ -4,6 +4,7 @@
 # DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
 alias reload!='. ~/.zshrc'
+alias klatre-bord="cd ~/Documents/Klatring/Kåringer-2013;l";
 
 # ================ Basics ============================
 
@@ -25,6 +26,8 @@ alias md='mkdir -p'
 alias rd='rmdir'
 
 alias grep='grep --color=auto'
+
+alias empty-trash='rm -r ~/.local/share/Trash/files/'
 
 # ================ Applications ======================
 
@@ -59,6 +62,6 @@ alias pac-search='pacman -Ss'
 alias pac-local-info='pacman -Qi'
 alias pac-local-search='pacman -Qs'
 
-alias pac-update='sudo pacman -Sy && sudo abs'
+alias pac-update='sudo pacman -Sy'
 alias pac-install-as-dependency='sudo pacman -S --asdeps'
 alias pac-refresh-mirror='sudo pacman -Syy'

@@ -25,3 +25,5 @@ local ZSH_ROOT=$HOME/.zsh
 
 . $ZSH_ROOT/init.zsh
 . $ZSH_ROOT/prompt.zsh
+
+export PYTHONSTARTUP=$HOME/.pyrc
