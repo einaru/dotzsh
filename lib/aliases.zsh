@@ -4,7 +4,6 @@
 # DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
 alias reload!='. ~/.zshrc'
-alias klatre-bord="cd ~/Documents/Klatring/Kåringer-2013;l";
 
 # ================ Basics ============================
 
@@ -33,12 +32,17 @@ alias empty-trash='rm -r ~/.local/share/Trash/files/'
 
 alias vi='vim'
 alias gvimrs='gvim --remote-silent'
+alias e='$EDITOR'
+alias ge='gvim'
 
 alias xclip='xclip -sel clip'
+
+alias xopen='xdg-open'
 
 # ================ Custom locations ==================
 
 alias emner='cd /mnt/$HOST/documents/ntnu/emne-koder;l'
+alias master='cd ~/Documents/Master/Emner;l'
 
 # ================ Administration ====================
 
@@ -65,3 +69,10 @@ alias pac-local-search='pacman -Qs'
 alias pac-update='sudo pacman -Sy'
 alias pac-install-as-dependency='sudo pacman -S --asdeps'
 alias pac-refresh-mirror='sudo pacman -Syy'
+
+# ================ Utilities =========================
+
+alias grep-todo='grep -niR TODO *'
+alias grep-fixme='grep -niR FIXME *'
+alias vim-bundle-install='vim +BundleInstall +qall'
+
