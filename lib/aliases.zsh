@@ -26,23 +26,9 @@ alias rd='rmdir'
 
 alias grep='grep --color=auto'
 
-alias empty-trash='rm -r ~/.local/share/Trash/files/'
-
-# ================ Applications ======================
-
 alias vi='vim'
 alias gvimrs='gvim --remote-silent'
-alias e='$EDITOR'
-alias ge='gvim'
-
-alias xclip='xclip -sel clip'
-
-alias xopen='xdg-open'
-
-# ================ Custom locations ==================
-
-alias emner='cd /mnt/$HOST/documents/ntnu/emne-koder;l'
-alias master='cd ~/Documents/Master/Emner;l'
+alias e='gvim' #'$EDITOR'
 
 # ================ Administration ====================
 
@@ -70,9 +56,28 @@ alias pac-update='sudo pacman -Sy'
 alias pac-install-as-dependency='sudo pacman -S --asdeps'
 alias pac-refresh-mirror='sudo pacman -Syy'
 
-# ================ Utilities =========================
+# ================ Custom locations ==================
+
+MASTER_DIR="$HOME/Documents/Master"
+alias emner="cd /mnt/$HOST/documents/ntnu/emne-koder;l"
+alias master="cd $MASTER_DIR/Emner;l"
+
+alias weka="java -jar $MASTER_DIR/Emner/tdt4300/exercises/software/weka-3-6-10/weka.jar"
+
+# ================ Miscellaneous =====================
+
+alias rm-flashcache='rm -r ~/.{adobe,macromedia}/Flash_Player'
+alias rm-trash='rm -r ~/.local/share/Trash/files/'
+
+alias xclip='xclip -sel clip'
+
+alias xopen='xdg-open'
 
 alias grep-todo='grep -niR TODO *'
 alias grep-fixme='grep -niR FIXME *'
-alias vim-bundle-install='vim +BundleInstall +qall'
 
+# Install Vundle bundles
+alias ivb='vim +BundleInstall +qall'
+
+# Print the CPU temperature
+alias cputemp="awk '{printf \"%3.1f°C\n\", \$1/1000}' /sys/class/thermal/thermal_zone0/temp"

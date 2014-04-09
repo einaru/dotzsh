@@ -11,6 +11,7 @@ setopt PROMPT_SUBST
 setopt RM_STAR_WAIT
 
 unsetopt beep
+unsetopt nomatch
 
 bindkey -e
 
