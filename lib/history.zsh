@@ -1,7 +1,6 @@
-# lib/history.zsh
-#
-# Copyright (c) 2013 Einar Uvsløkk
-# DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+# File: history.zsh
+# Copyright: (c) 2014 Einar Uvsløkk
+# Descripton: (z)shell history setup
 
 HISTFILE=$HOME/.histfile
 HISTSIZE=10000
