@@ -1,24 +1,37 @@
-# lib/vars.zsh
-#
-# Copyright (c) 2013 Einar Uvsløkk
-# DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+# File envvars.zsh
+# Copyright: (c) 2014 Einar Uvsløkk
+# Descripton: Zsh environment variables
 
-# ================ Application defaults ==============
+EDITOR='vim'
 
-export EDITOR='vim'
+# Python
+[ -f $HOME/.pyrc ] && PYTHONSTARTUP="$HOME/.pyrc"
+if [ -f /usr/bin/virtualenvwrapper.sh ]; then
+	export WORKON_HOME="$HOME/.local/share/virtualenvs"
+	[ ! -d $WORKON_HOME ] && mkdir -p $WORKON_HOME
+	source /usr/bin/virtualenvwrapper.sh
+fi
 
-# ================ Python ============================
+# TeX Live
+INFOPATH="$INFOPATH:/usr/local/texlive/2014/texmf-dist/doc/info"
+MANPATH="$MANPATH:/usr/local/texlive/2014/texmf-dist/doc/man"
+PATH="$PATH:/usr/local/texlive/2014/bin/x86_64-linux"
 
-export PYTHONSTARTUP=$HOME/.pyrc
+# Go
+GOPATH="$HOME/.go"
+PATH="$PATH:$HOME/.go/bin"
 
-# ================ PATH ==============================
+# Node
+PATH="$PATH:$HOME/.local/share/node_modules/"
 
-PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
-#PATH=/opt/android-sdk/tools:$PATH
-#PATH=/mnt/debris/lib/android/sdk/tools:$PATH
-PATH=/mnt/debris/opt/android-studio/sdk/tools:$PATH
-PATH=/mnt/debris/opt/android-studio/sdk/platform-tools:$PATH
-PATH=$HOME/.gem/ruby/2.0.0/bin:$PATH
-PATH=$HOME/.bin:$PATH
+# Local
+PATH="$PATH:$HOME/.local/bin"
+MANPATH="$MANPATH:/.local/share/man"
+
+# Exports
+export EDITOR=$EDITOR
+export INFOPATH=$INFOPATH
+export MANPATH=$MANPATH
+export GOPATH=$GOPATH
+export PYTHONSTARTUP=$PYTHONSTARTUP
 export PATH=$PATH
-

@@ -1,28 +1,27 @@
-# .zshrc
-#
-# Copyright (c) 2013 Einar Uvsløkk
-# DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+# File: zshrc
+# Copyright: (c) 2014 Einar Uvsløkk
+# Descripton: Main zshell configuration file
 
-setopt notify
-setopt COMPLETE_IN_WORD
-setopt NO_BEEP
-setopt PROMPT_PERCENT
-setopt PROMPT_SUBST
-setopt RM_STAR_WAIT
-
+# Lines configured by zsh-newuser-install
+setopt autocd
 unsetopt beep
-unsetopt nomatch
-
 bindkey -e
-
+# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename $HOME/.zshrc
 
-autoload -Uz compinit && compinit
-autoload -U colors && colors
-autoload -U promptinit && promptinit
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 local ZSH_ROOT=$HOME/.zsh
+fpath=($ZSH_ROOT/functions $fpath)
+for libfile ($ZSH_ROOT/lib/*.zsh) . $libfile
 
-. $ZSH_ROOT/init.zsh
-. $ZSH_ROOT/prompt.zsh
+#function virtual_env_prompt() {
+#	REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+#}
+#grml_theme_add_token virtual-env -f virtual_env_prompt
+#zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vsc percent
+autoload -U promptinit && promptinit
+prompt pure
