@@ -1,7 +1,13 @@
-# README
+# Readme .zsh
 
-Z shell (zsh) configuration files
+My personal zsh configuration.
 
-# License
-Copyright (c) 2013 Einar Uvsløkk
-[DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE](http://www.wtfpl.net/txt/copying/)
+
+## Install
+
+Clone the repository and create a symlink to `~/.zshrc`:
+
+``` bash
+git clone https://github.com/einaru/dotzsh.git ~/.zsh
+ln -s ~/.zsh/zshrc ~/.zshrc
+```
