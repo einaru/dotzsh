@@ -2,10 +2,11 @@
 # Copyright: (c) 2014 Einar Uvsløkk
 # Descripton: Zsh environment variables
 
-EDITOR='vim'
+local bin_path man_path info_path rc_file
 
 # Python
-[ -f $HOME/.pyrc ] && PYTHONSTARTUP="$HOME/.pyrc"
+rc_file="$HOME/.pyrc"
+[ -f $rc_file ] && PYTHONSTARTUP=$rc_file
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 	export WORKON_HOME="$HOME/.local/share/virtualenvs"
 	[ ! -d $WORKON_HOME ] && mkdir -p $WORKON_HOME
@@ -13,25 +14,37 @@ if [ -f /usr/bin/virtualenvwrapper.sh ]; then
 fi
 
 # TeX Live
-INFOPATH="$INFOPATH:/usr/local/texlive/2014/texmf-dist/doc/info"
-MANPATH="$MANPATH:/usr/local/texlive/2014/texmf-dist/doc/man"
-PATH="$PATH:/usr/local/texlive/2014/bin/x86_64-linux"
+info_path="/usr/local/texlive/2014/texmf-dist/doc/info"
+man_path="/usr/local/texlive/2014/texmf-dist/doc/man"
+bin_path="/usr/local/texlive/2014/bin/x86_64-linux"
+[ -d $info_path ] && INFOPATH="$INFOPATH:$info_path"
+[ -d $man_path ] && MANPATH="$MANPATH:$man_path"
+[ -d $bin_path ] && PATH="$PATH:$bin_path"
 
 # Go
 GOPATH="$HOME/.go"
-PATH="$PATH:$HOME/.go/bin"
+bin_path="$HOME/.go/bin"
+[ -d $bin_path ] && PATH="$PATH:$bin_path"
 
 # Node
-PATH="$PATH:$HOME/.local/share/node_modules/"
+bin_path="$HOME/.local/share/node_modules/bin"
+[ -d $bin_path ] && PATH="$PATH:$bin_path"
+
+# Ruby
+bin_path="$HOME/.gem/ruby/2.1.0/bin"
+[ -d $bin_path ] && PATH="$PATH:$bin_path"
 
 # Local
-PATH="$PATH:$HOME/.local/bin"
-MANPATH="$MANPATH:/.local/share/man"
+man_path="$HOME/.local/share/man"
+bin_path="$HOME/.local/bin"
+[ -d $man_path ] && MANPATH="$MANPATH:$man_path"
+[ -d $bin_path ] && PATH="$PATH:$bin_path"
 
 # Exports
-export EDITOR=$EDITOR
+export EDITOR='vim'
 export INFOPATH=$INFOPATH
 export MANPATH=$MANPATH
 export GOPATH=$GOPATH
 export PYTHONSTARTUP=$PYTHONSTARTUP
+export LOCALBINPATH=$LOCALBINPATH
 export PATH=$PATH
