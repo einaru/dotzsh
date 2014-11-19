@@ -57,6 +57,13 @@ function ipaddr() {
 	ip addr show wlp2s0 | awk '/inet[^6]/{print $2}' | awk -F'/' '{print $1}'
 }
 
+# func: screenres
+# desc: Display the current screen resolution
+function screenres() {
+	xrandr | grep '*' | cut -d" " -f4
+}
+alias scrnres='screenres'
+
 
 # func: darkify
 # desc: Make Spotify use dark theme window borders.
