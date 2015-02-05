@@ -8,7 +8,9 @@ alias reload!='. ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-[ -d ~/Documents/master/emner ] && alias master='cd ~/Documents/master/emner/&&l'
+[ -d ~/Documents/Master ] && alias master='cd ~/Documents/Master/Thesis/&&l'
+[ -d ~/Documents/Master/Emner ] && alias emner='cd ~/Documents/Master/Emner/&&l'
+[ -d ~/Documents/Master/Thesis ] && alias thesis='cd ~/Documents/Master/Thesis/&&l'
 
 # Directory listing
 alias ls='ls --color=auto'
@@ -31,8 +33,9 @@ alias e="$(if [[ -n $DISPLAY ]]; then echo 'gvim'; else echo 'vim'; fi)";
 
 alias xclip='xclip -sel clip'
 
+alias popcorn-time='/mnt/data/opt/popcorn-time/Popcorn-Time'
+
 # Fun
 alias cputemp="awk '{printf \"%3.1f°C\n\", \$1/1000}' /sys/class/thermal/thermal_zone0/temp"
 
 alias list-my-pkg='expac "%n %p" | grep "Einar Uvsløkk" | column -t'
-
