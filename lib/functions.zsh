@@ -71,6 +71,11 @@ alias scrnres='screenres'
 function darkify() {
 	local wm_class
 	wm_class="Spotify - Linux Preview"
+
+	case "${(L)1}" in
+		('premium') wm_class="Spotify Premium - Linux Preview" ;;
+	esac
+
 	xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -name $wm_class
 }
 
@@ -85,10 +90,11 @@ function devel() {
 	[ ! -d $path ] && return
 
 	case "$lower" in
-		('arch')        path="$path/arch" ;;
-		('linux')       path="$path/linux" ;;
-		('gh'|'github') path="$path/github" ;;
-		('local')       path="$path/local" ;;
+		('arch')        path="$path/arch"      ;;
+		('linux')       path="$path/linux"     ;;
+		('gh'|'github') path="$path/github"    ;;
+		('local')       path="$path/local"     ;;
+		('web'|'www')   path="$path/local/www" ;;
 	esac
 
 	cd $path
