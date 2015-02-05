@@ -8,7 +8,7 @@ alias reload!='. ~/.zshrc'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-[ -d ~/Documents/Master ] && alias master='cd ~/Documents/Master/Thesis/&&l'
+[ -d ~/Documents/Master ] && alias master='cd ~/Documents/Master/&&l'
 [ -d ~/Documents/Master/Emner ] && alias emner='cd ~/Documents/Master/Emner/&&l'
 [ -d ~/Documents/Master/Thesis ] && alias thesis='cd ~/Documents/Master/Thesis/&&l'
 
